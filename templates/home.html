@@ -43,16 +43,17 @@
     <body>
         <div id = "container">
         <h1>Job Listings Page</h1>
-        <img id="banner" src="http://192.168.0.101:5000/static/forhire.jpg">
+        <img id="banner" src="http://192.168.0.101:5000/static/jobs.jpg">
         <h2>About Company</h2>
         <p class="bodytext">We are a dynamic company committed to providing high-quality products and exceptional customer service. Our team is passionate about innovation and creativity, 
             and we strive to deliver cutting-edge solutions to our clients. With a focus on sustainability and social responsibility, we are dedicated to making a positive impact on the world. 
             Our goal is to exceed expectations and build long-lasting relationships with our customers, partners, and employees.</p>
         <h2>Job Listings</h2>
-        <p class="bodytext">
+        <div>
             {% for job in jobs %}
+              {% include 'jobs.html' %}
             {% endfor %}
-        </p>
+        </div>
         <div id = "button"> <button class="btn btn-outline-light">Contact Us</button> </div>
         </div>
         </body>
